@@ -1,18 +1,18 @@
-// Escribe cualquier cosa aquí
-const text = "GAMIFY";
+// type anything here
+const text = "Gamify";
 
-// Esta función convierte una cadena en un array
-function createLetterArray(string) {
+// this function turns a string into an array
+const createLetterArray = (string) => {
   return string.split("");
-}
+};
 
-// Esta función crea capas de letras envueltas en etiquetas span
-function createLetterLayers(array) {
+// this function creates letter layers wrapped in span tags
+const createLetterLayers = (array) => {
   return array.map((letter) => {
     let layer = "";
-    // Especifica el número de capas por letra
+    //specify # of layers per letter
     for (let i = 1; i <= 2; i++) {
-      // Si la letra es un espacio
+      // if letter is a space
       if (letter == " ") {
         layer += '<span class="space"></span>';
       } else {
@@ -21,18 +21,18 @@ function createLetterLayers(array) {
     }
     return layer;
   });
-}
+};
 
-// Esta función envuelve cada letra en un contenedor principal
-function createLetterContainers(array) {
+// this function wraps each letter in a parent container
+const createLetterContainers = (array) => {
   return array.map((item) => {
     let container = "";
     container += '<div class="wrapper">' + item + "</div>";
     return container;
   });
-}
+};
 
-// Utiliza una promesa para mostrar las capas de texto en el DOM primero
+// use a promise to output text layers into DOM first
 const outputLayers = new Promise(function (resolve, reject) {
   document.getElementById("text").innerHTML = createLetterContainers(
     createLetterLayers(createLetterArray(text))
@@ -40,7 +40,7 @@ const outputLayers = new Promise(function (resolve, reject) {
   resolve();
 });
 
-// Luego ajusta el ancho y alto de cada letra
+// then adjust width and height of each letter
 const spans = Array.prototype.slice.call(document.getElementsByTagName("span"));
 outputLayers
   .then(() => {
@@ -52,7 +52,7 @@ outputLayers
     });
   })
   .then(() => {
-    // Luego desliza las letras a la vista una por una
+    // then slide letters into view one at a time
     let time = 250;
     return spans.map((span) => {
       time += 75;
