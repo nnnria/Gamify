@@ -1,0 +1,133 @@
+@font-face {
+  font-family: agbalumo;
+  src: url("fonts/Agbalumo/Agbalumo-Regular.ttf");
+}
+:root {
+  --soft-header-purple: #bdb9e7;
+  --hard-bar-purple: rgb(158, 22, 195);
+  --background-purple: rgb(179, 57, 213);
+  --hard-bar-purple-hover: rgb(137, 14, 171);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+ height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hard-bar-purple);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hard-bar-purple-hover);
+}
+header {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.card-in {
+  background-color: var(--hard-bar-purple) !important;
+}
+.background-gradient-space {
+  background-image: linear-gradient(
+    to bottom,
+    #d53dd3,
+    #c42ed8,
+    #af20de,
+    #9616e4,
+    #7612eb
+  );
+}
+.icon-user {
+  background-image: url("./images/user.png");
+  background-size: 100%;
+  width: 80px;
+  height: 80px;
+}
+.gamify-title {
+  font-family: agbalumo;
+  text-align: center;
+}
+main {
+  /*background-image: url("./images/space.png");*/
+  /*background-color: var(--hard-bar-purple-hover);*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 75%;
+}
+footer {
+  padding: 0 5%;
+  width: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: flex-end;
+}
+footer div {
+  flex-direction: row;
+}
+footer div:first-child {
+  flex: 60%;
+}
+footer div p {
+  color: white;
+}
+footer img {
+  width: 140px;
+  height: 50px;
+  margin-bottom: 5%;
+}
+.custom-form {
+  text-align: center;
+}
+
+.custom-form .form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+}
+.custom-form .form-control::placeholder {
+  color: gray;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.custom-form .btn {
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px; /* Increase padding for a larger button */
+  font-size: 18px; /* Increase font size for a larger button */
+  margin-top: 0px; /* Add space between the input and button */
+}
+
+@media (max-width: 1038) {
+  body {
+    height: 200vh;
+  }
+  header {
+    background-color: var(--soft-header-purple);
+    width: auto;
+    height: 8vw;
+  }
+  main {
+    width: auto;
+    height: 50vw;
+    background-size: 100%;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+  footer {
+    background-color: var(--soft-header-purple);
+    width: auto;
+    height: 5vw;
+  }
+}
