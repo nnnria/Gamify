@@ -139,14 +139,37 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     padding: 30px 30px 30px 30px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.468);
     position: relative;
     overflow: hidden;
     border-radius: 20px;
     margin-top: 65px;
+
+    /*css borde de colores*/
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(145deg, transparent 25%,#ff006f, #ef40ff) border-box;
+    border: 4px solid transparent;
+    color: white;
+    background-size: 200% 100%;
+    animation: gradient 3s ease infinite;
   }
+ /*animaciones borde colores*/
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
   
   .heading {
     font-size: 2em;
@@ -208,21 +231,34 @@
     letter-spacing: 1px;
     margin: 10px;
     cursor: pointer;
+    transition: border-radius 0.5s ease-in-out;
   }
   
   #button:hover {
     background-color: rgb(126, 84, 255);
+    border-radius: 10px;
+
   }
-  
-  .forgotLink {
+  .frase1{
+    z-index: 2;
+    font-size: .7em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .forgotLink , .signUpLink{
     z-index: 2;
     font-size: .7em;
     font-weight: 500;
+    text-decoration: none;
     color: rgb(44, 24, 128);
     text-decoration: none;
     padding: 8px 15px;
-    border-radius: 20px;
+    
   }
-  
+
+  .forgotLink:hover , .signUpLink:hover {
+    text-decoration: underline;
+  }
   
   
