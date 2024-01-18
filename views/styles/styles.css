@@ -4,7 +4,8 @@
   scroll-behavior: smooth;
   text-decoration: none;
   box-sizing: border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
 
 body {
@@ -21,39 +22,57 @@ body {
     #7612eb
   );
 }
+
 section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 10px;
   height: 75vh;
   width: 60vw;
   padding: 20px;
-  gap: 10px;
-  background-color: #cfcfcf;
+  background-color: #5f5f5f;
 }
 
-.sectionDivContent{
+.headBodyContent {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+.sectionDivContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  max-width: fit-content;
+}
+
 h1 {
   display: flex;
   justify-content: center;
   color: aliceblue;
-  margin: 20px;
+  margin: 30px 20px 20px 20px;
   font-family: "Agbalumo";
 }
 
+h2 {
+  box-sizing: border-box;
+  max-width: fit-content;
+}
+
 h4 {
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
   width: 25vw;
   display: flex;
   justify-content: center;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .imageSpaceships {
@@ -61,7 +80,7 @@ h4 {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  gap: 15px;
+  margin: 5px;
 }
 
 .imageCards {
@@ -69,28 +88,82 @@ h4 {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  gap: 15px;
 }
-.card {
+
+.cards {
   width: 150px;
   height: 150px;
   display: flex;
-  justify-content: center space-between;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #000000;
+  flex-direction: column;
+  border: 3px solid #000000;
   border-radius: 5px;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
+  position: relative;
 }
 
-.card img {
+.cards img {
   max-width: 100%;
   max-height: 100%;
   display: block;
   margin: auto;
+  display: block;
 }
 
 .iconUser {
   width: 100px;
   height: 100px;
   float: left;
+}
+/* 
+afegir el marc 
+arreclar el boto per tornar al menu
+arreclar fondo
+ferho responsive
+*/
+
+.divCardInfo {
+  position: absolute;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  font-weight: 200;
+  position: relative;
+}
+
+button {
+  border: 3px solid #000000;
+  border-radius: 5px;
+  padding: 5px;
+}
+.zoom-effect:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  z-index: 0.5;
+}
+/*METER EL ZOOM EFECT EN CARDS. */
+#button {
+  z-index: 2;
+  position: relative;
+  border: none;
+  background-color: rgb(162, 104, 255);
+  height: 30px;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 10px;
+  cursor: pointer;
+  transition: border-radius 0.5s ease-in-out;
+}
+
+#button:hover {
+  background-color: rgb(126, 84, 255);
+  border-radius: 10px;
 }
