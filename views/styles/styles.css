@@ -25,22 +25,21 @@ body {
 }
 
 section {
-  border: 3px solid black;
-  border-radius: 10px;
   height: 75vh;
   width: 60vw;
   padding: 20px;
-  background-color: #a9a9a9;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.468);
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+
   /*css borde de colores*/
-  background: linear-gradient(#a9a9a9, #a9a9a9) padding-box,
+  background: linear-gradient(#c0c0c0, #c0c0c0) padding-box,
     linear-gradient(145deg, transparent 25%, #ff006f, #ef40ff) border-box;
   border: 4px solid transparent;
   background-size: 200% 100%;
   animation: gradient 3s ease infinite;
+
   /*animaciones borde colores*/
   @keyframes gradient {
     0% {
@@ -74,7 +73,7 @@ section {
 h1 {
   display: flex;
   justify-content: center;
-  font-size:40px;
+  font-size: 40px;
   color: aliceblue;
   margin: 30px 20px 20px 20px;
   font-family: "Agbalumo";
@@ -168,6 +167,7 @@ p {
   font-weight: bolder;
   position: relative;
   font-size: large;
+  color: #292929;
 }
 
 .zoom-effect:hover {
@@ -175,7 +175,7 @@ p {
   transition: 0.5s;
   z-index: 0.5;
 }
-
+/* CAMBIAR ESTILOS DEL BOTON  */
 #button {
   z-index: 2;
   position: relative;
